@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Ktpl_Customization>
+            <version>0.0.1</version>
+        </Ktpl_Customization>
+    </modules>
+    <global>        
+        <models>
+            <ktpl_customization>
+                <class>Ktpl_Customization_Model</class>
+            </ktpl_customization>
+        </models>                
+    </global>    
+    <frontend>        
+        <events>            
+            <sales_quote_add_item>
+                <observers>
+                    <ktpl_sales_quote_add_item>
+                        <type>singleton</type>
+                        <class>Ktpl_Customization_Model_Observer</class>
+                        <method>salesQuoteAddItem</method>
+                    </ktpl_sales_quote_add_item>
+                </observers>
+            </sales_quote_add_item>
+        </events>
+    </frontend>    
+</config>
